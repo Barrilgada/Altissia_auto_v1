@@ -15,7 +15,6 @@ def button_for_play(driver, button_html):
 
 
 
-
 '''def button_for_play(imagem):
     position = pyautogui.locateCenterOnScreen(imagem)
     return position
