@@ -9,7 +9,7 @@ import login
 def button_for_play(driver, button_html):
         button_play = driver.find_element(By.XPATH, button_html)
         button_play.click()
-        time.sleep(10)
+        time.sleep(45)
         driver.refresh()
         time.sleep(7)
 
