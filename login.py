@@ -5,14 +5,14 @@ import pyscreeze
 import PILTools
 from selenium.webdriver.common.by import By
 
-def login_credentials(text, password):
-    pyautogui.press('tab', presses=3)
+def login_credentials(text, password, email_html, driver, password_html):
+    email = driver.find_element(By.XPATH, email_html)
+    email.click()
     time.sleep(1)
     pyautogui.typewrite(text)
-    time.sleep(1)
-    pyautogui.press('tab', presses=1)
+    password_html = driver.find_element(By.XPATH, password_html)
+    password_html.click()
     time.sleep(1)
     pyautogui.typewrite(password)
-    time.sleep(1)
     pyautogui.press('enter', presses=1)
 
